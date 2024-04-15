@@ -1,0 +1,10 @@
+#https://leetcode.com/problems/product-of-array-except-self/description/
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        left = [1]
+        right = [1]
+        for num in nums[:-1]:
+            left.append(left[-1]*num)
+        for num in nums[:0:-1]:
+            right.insert(0,(int(num*right[0])))
+        return [l*r for l, r in zip(left, right)]
