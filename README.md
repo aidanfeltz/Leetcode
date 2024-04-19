@@ -1,1 +1,1 @@
-Incomplete list of Leetcode problems I have solved
+some of the leetcode problems i've solved
